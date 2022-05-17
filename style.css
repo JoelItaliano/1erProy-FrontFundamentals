@@ -1,37 +1,89 @@
+/*Sacamos el margen y pading del navegador*/
 *{margin: 0; padding: 0;}
 
+/*insertamos la imagen de fondo al cuerpo y le damos un ancho y alto para que cubra toda la pantalla*/
 body{
     width: 100vw;
     height: 100vh;
     font-family: 'Signika', sans-serif;
     background: url('./img/background-body.jpg') no-repeat ;
     background-size: 100% 100%;
-    display: flex;
+    color: rgb(255,255,255);
+    display: flex; /*display flex para poder centrar el contenedor del form*/
     justify-content: center;
     align-items: center;
 }
 
+/*Estilos al contenedor*/
 .contenedor-form{
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: rgb(30, 26, 29);
+    border: 4px dashed rgb(254, 95, 0);
+    border-radius: 15px;
     padding: 10px;    
     width: 300px;
 }
 
-.form{
-    padding: 5px;
-    text-align: center  ;
+/*estilo de la linea que separa al titulo del formulario*/
+hr{
+    border: 2px solid rgb(30,150,252);
+    margin-bottom: 10px;
 }
 
-.form label {
-    position: relative;
-    align-items: flex-start;
+/*centramos los items del form*/
+.form{
+    text-align: center; 
 }
-.form input, select{
+
+/*agregamos borde a las etiquetas de form, select y fieldest*/
+.form input, select, fieldset{
+    border: 3px solid rgb(0, 238, 255);
     border-radius: 10px;
     padding: 5px;  
-       
+}
+/*agregamos un ancho a las cajas donde se ingresan los datos*/
+.caja-texto{
+   width: 70%;
+}
+/*agregamos un fondo a la agrupacion de los radios buttons para que no se mezcle con el color de fondo del contenedor*/
+fieldset{
+    background-color: rgb(255, 255, 255);
+    color: rgb(30, 26, 29);
+    position: relative; /*posision relativa para poder centrarlo*/
+    margin: 0 auto;
+    width: 75%;
 }
 
+/*margen a los radio button par amantenerlos separados*/
+.radio_button{
+  margin: 10px;
+}
+
+/*estilos a los botones*/
+.button{
+    background-color: rgb(30,150,252);
+    color: rgb(255,255,255); 
+    font-size: 20px; 
+    width: 60%;
+}
+/*cuando pasa el mouse sobre el boton produce una animacion que escala el objeto*/
+.button:hover{
+    transform: scale(1.2);
+}
+
+/*alineamos el texto de la pag de inicio*/
+p{
+    text-align: center;
+    
+}
+/*saco la decoracion del texto y le agrego un color*/
+ a{
+    text-decoration: none;
+    color: rgb(30,150,252);
+}
+/*cuando paso el mouse sobre el link produce un cambio en este*/
+ a:hover{
+     text-decoration: underline;
+     font-size: 20px;
+ }
 
 

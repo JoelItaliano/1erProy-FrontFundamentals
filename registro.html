@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Tzul Zul</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
    <section class="contenedor-form">
        <h2>Registrarse</h2>
        <hr>
-       <form action="" class="form">
+       <form action="https://formspree.io/f/xjvljlgk" method="post" class="form" target="_blank">
             <label for="txt__nombre">Nombre y Apellido</label><br>
-            <input type="text" name="txt__nombre" required placeholder="Ingrese su nombre y Apellido"/>
+            <input class="caja-texto" type="text" name="txt__nombre" required placeholder="Ingrese su nombre y Apellido"/>
             <br><br>
             <label for="lista__Desplegable">Pais:</label><br>
-            <select name="lista__Desplegable">
+            <select name="lista__Desplegable" class="caja-texto">
             <option>Argentina</option>
             <option>Bolivia</option>
             <option>Brasil</option>
@@ -48,23 +49,28 @@
             <option>Venezuela</option>
             </select>
             <br><br>
-            <label for="radio_button">Sexo: </label><br>
-            <label for="m">Masc <input type="radio" name="sexo" id="m"></label>
-            <label for="f">Fem <input type="radio" name="sexo" id="f"></label>
-            <br><br>
+            <fieldset>
+                <br>
+                <label for="f" class="radio_button"><span class="material-symbols-outlined" style="color: violet;">female</span>Mujer <input type="radio" name="sexo" id="f" value="femenino" checked></label>
+                <label for="m" class="radio_button"><span class="material-symbols-outlined" style="color: blue;">male</span>Hombre <input type="radio" name="sexo" id="m" value="masculino"></label>
+                <br><br>
+            </fieldset>
+            <br>
             <label for="pass__contraseña">Contraseña</label><br>
-            <input type="password" name="pass__contraseña" required placeholder="Ingrese la contraseña">
+            <input class="caja-texto" type="password" name="pass__contraseña" required placeholder="Ingrese la contraseña">
             <br><br>
             <label for="pass__confirmar__contraseña">Confirmar Contraseña</label><br>
-            <input type="password" name="pass__confirmar__contraseña" required placeholder="Reingrese la contraseña">
+            <input class="caja-texto" type="password" name="pass__confirmar__contraseña" required placeholder="Reingrese la contraseña">
             <br><br>
             <label for="email">Email</label><br>
-            <input type="email" name="email">
+            <input class="caja-texto" type="email" name="email">
             <br><br>
-            <label for="chec_uno"><input type="checkbox" checked>Acepto los <a href="" target="_blank">terminos y servicios</a></label><br>
-            <label for="chec_dos"><input type="checkbox" checked>Deseo recibir informacion</label>
+            
+            <label for="chec_uno"><input type="checkbox" checked> Acepto los <a href="" target="_blank">terminos y servicios</a></label><br>
+            <label for="chec_dos"><input type="checkbox" checked> Deseo recibir informacion</label>
             <br><br>
-            <input type="submit" value="Registrar">
+            
+            <input class="button" type="submit" value="Registrar">
        </form>
    </section>
 </body>
